@@ -42,7 +42,11 @@
 
       /* Active Tab */
       .ret-bo-tab.active {
-        background: linear-gradient(to bottom, #004175, #002b48);
+        background: linear-gradient(
+          to bottom,
+          #f59e42,
+          #d65911
+        ); /* Orange gradient */
         color: white;
         font-weight: bold;
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25),
@@ -67,17 +71,16 @@
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
       }
 
-      /* Hover Effect (For Selected Button - Slightly Brighter Blue) */
+      /* Hover Effect (For Selected Button - Slightly Brighter Orange) */
       .ret-bo-tab.active:hover {
         background: linear-gradient(
           to bottom,
-          #0055a5,
-          #003c6e
-        ); /* Slightly brighter blue */
+          #ffa45c,
+          #cc4f0a
+        ); /* Slightly brighter/darker orange */
         box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.3),
           inset 0px 0px 8px rgba(255, 255, 255, 0.3);
       }
-
       .ret-bo-pricing-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -172,51 +175,39 @@
         display: block;
       }
       .ret-bo-button {
-        background: #388e3c;
-        color: white;
-        padding: 12px 18px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background 0.3s;
-      }
-      .ret-bo-button {
         background: linear-gradient(
           to bottom,
           #0c8f1f 0%,
           #075a12 100%
         ); /* Dark green default */
         color: white;
-        padding: 18px 30px;
+        font-size: 20px; /* Increased text size */
+        font-weight: bold;
+        padding: 20px 30px; /* Adjusted padding for better balance */
+        text-transform: uppercase; /* Ensures all caps */
         border: none;
-        border-radius: 27px;
+        border-radius: 40px;
         cursor: pointer;
         margin-top: 15px;
         margin-bottom: 20px;
-        width: 100%; /* Makes button stretch full width of card */
-        max-width: 300px; /* Prevents it from becoming too wide */
+        width: 100%; /* Stretches full width of card */
+        max-width: 300px; /* Prevents it from getting too wide */
         transition: background 0.3s, transform 0.2s;
         box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
       }
 
-      /* Hover: Changes to orange */
+      /* Hover: Slightly lighter green */
       .ret-bo-button:hover {
-        background: linear-gradient(
-          to bottom,
-          #f59e42 0%,
-          #e07c00 100%
-        ); /* Light to dark orange */
+        background: linear-gradient(to bottom, #f59e42 0%, #e07c00 100%);
         transform: scale(1.02);
       }
 
-      /* Active (Clicked) State */
+      /* Click (Active) State */
       .ret-bo-button:active {
         background: linear-gradient(to bottom, #075a12 0%, #05430e 100%);
         transform: scale(0.98);
       }
+
       .ret-bo-product-image {
         width: auto; /* Keeps original width */
         max-width: 100%; /* Prevents overflow */
